@@ -26,7 +26,7 @@ Justin B. YaDeau\\
 \maketitle
 
 \begin{abstract}
-A discussion on the use of 3D projectors and thermal sensors to interact with 3D data visualization, without having to actually touch an electronic device. This leads to a cut down on the amount of electronic devices needed for modern life.
+This paper discussion the use of 3D projectors and thermal sensors to interact with 3D data visualization, without having to actually touch an electronic device. This leads to a cut down on the amount of electronic devices needed for modern life.
 \todo[inline]{Subject to change}
 \end{abstract}
 
@@ -35,33 +35,32 @@ A discussion on the use of 3D projectors and thermal sensors to interact with 3D
 \section{Introduction}
 \label{sec:introduction}
 
+
 \section{Background}
 \label{sec:background} 
 
 \subsection{Virtual Reality}
 \label{sec:Virtual Reality}
 
-The first thing that comes to mind when thinking about Virtual Reality, VR, is the Oculist Rift. VR has been around for a while, it is not some futuristic technology that we have yet to explore. Some early examples would be the view master, the stereoscopic toy had those circular inserts that required the user to look into a light source to illuminate the picture. Nintendo had its own type of Oculist Rift called Virtual Boy in the 90's.     
+The most well known example of Virtual Reality (VR) is the Oculus Rift. VR has been around for a while. Some early examples would be the view master, the stereoscopic toy that had circular inserts requiring the user to look into a light source to illuminate the picture. Nintendo had its own type of Oculist Rift in the 90's called Virtual Boy.      
 
 \subsection{Augmented Reality}
 \label{sec:Augmented Reality}
-Augmented Reality (AR) can be described as augmenting the environment of the real world. It differs from VR in the aspect that it is based more in the physical, or real world, instead of only seeing a fully digital one. An example is Google Translate, using the camera from a phone it translates a foreign word that you point at. On the phones screen it overlays the translation onto the sign, billboard, or menu. 
+Augmented Reality (AR) can be described as augmenting the environment of the real world. It's different from VR because it is based in the physical world instead of the digital world. An example is Google Translate: using the camera from a phone it translates foreign words that you point at. On the phones screen it overlays the translation onto the sign, billboard, or menu. 
 
 \todo[inline]{3Ds AR Cards?}
 
 \subsection{Spatial Augmented Reality}
 \label{sec:Spatial Augmented Reality}
-Spatial Augmented Reality, SAR, is similar to AR. The difference is it focuses more on augmenting reality through projection technology, instead of using conventional monitors or other such devices. A good example would be if you have a sandbox with a topographical map overlaid onto it. You could move the sand around and the projector would match the peaks and valleys in the sand with the correct topographic overlay for displaying peaks and valleys.  
+Spatial Augmented Reality, SAR, is similar to AR. The difference is that it focuses more on augmenting reality through projection technology, instead of using conventional monitors or other such devices. A good example of SAR is if you have a sandbox with a topographical map overlaid onto the sand. You could move the sand around and the projector would match the peaks and valleys in the sand with the correct topographic overlay for displaying peaks and valleys.  
 
 \subsection{6DOF}
 \label{sec:6DOF}
-6DOF, 6 degrees of freedom, are the different ways one can move in three dimensional space . From/back, left/right, up/down, roll, pitch, yaw are all the ways to move.
- 
-\todo[inline]{expand using roll, yaw, and pitch?}
+6DOF, 6 degrees of freedom, are the different ways one can move in three dimensional space . From/back, left/right, up/down, roll, pitch, yaw are all the ways to move. Roll is moving clockwise or counter clockwise in relation to the front/back axis. Yaw is moving the front/back axis to either left/right axis. Pitch is the same yaw, except the up/down axis instead of the left/right axis.
 
 \subsection{Data Visualization}
 \label{sec:Data Visualization}
-Data visualization is the representation of data visually. Basic examples are pie charts, scatter-plots, bar charts, and the list goes on. Data visualization can be used in any field. From showing the demographic of a neighborhood to how many car crashes happened over a given month.   
+Data visualization is the representation of data visually. Basic examples are pie charts, scatter-plots, bar charts, and the list goes on. Data visualization can be used in any field, from showing the demographic of a neighborhood to displaying how many shooting stars happen over the course of a year.   
 
 \section{Thermal Interaction}
 \label{sec:Thermal Interaction}
@@ -83,28 +82,30 @@ Mentioning that we gain a better understanding through touching is a good point 
 2) An example tabletop SAR prototype to demonstrate a number of the possibilities. Figure 1 \textbf{need to get Fig 1 from the paper} is an image of their prototype tabletop SAR system. The projections on the physical props define areas of investigation in a 3D volume. The 4K monitor provides detail views of the data in a 2D space. 
 
 3) A collection of possible large applications of SAR. It is called CAVE and is discussed later in this section.
+
+
 \subsection{Visualizing Data}
 \label{sec:Visualizing Data}
 
-Visualizing data is an effective way to show information quickly and efficiently. We tend to recall pictures easier then words. That's is why we have so many different types of charts. As mentioned before, the wide range of what data you can visualize makes what this paper proposes versatile in the real world.      
+Visualizing data is an effective way to show information quickly and efficiently. We tend to recall pictures easier than words. That is why there are many different types of charts. As mentioned before, the wide range of what data you can visualize makes what this paper proposes versatile in the real world.      
 
 \subsection{Applications}
 \label{sec:Applications}
 
-The paper mentions two ways that this can be applied in the real world. The main one they mention is the tabletop. This is a proposed system where there is a 2D display, they call it a fish tank view, a table with the physical object(s), the virtual volume, the hand held pointing device, 6DOF trackers, and the projectors. The virtual volume is the space around the table top, starting from the surface of the table extending up a foot or two. The CAVE is larger scale version of the tabletop method. Using walls as the physical objects to project onto. This would require a lot more space, 6DOF tracers, and projectors to get it set up.
+The paper mentions two ways that 3D data visualization can be applied in the real world. The main one they mention is the tabletop. This is a proposed system where there is a 2D display, they call it a fish tank view, a table with the physical object(s), the virtual volume, the hand held pointing device, 6DOF trackers, and the projectors. The virtual volume is the space around the table top, starting from the surface of the table extending up a foot or two. The CAVE is larger scale version of the tabletop method. Using walls as the physical objects to project onto. This would require a lot more space, 6DOF tracers, and projectors to get it set up.
 
 \todo[inline]{add pictures of the tabletop or CAVE}
 
 \subsection{Limitations}
 \label{sec:Limitations}
 
-The initial experimentation with their prototype showed a number of limitations with that approach. The first is the lighting the room must be controlled, as details in the gradients of the projected data may be lost with too much ambient lighting. Like anything projector related it works best in dim to dark room/places, depending on the type of projector. Normally we wouldn't take a projector outside in the middle of the day and try to use it. Even inside can be too bright, teachers tend to shut off the lights closest to the screen when they use a projector. They mention that a depending on the ambient lighting in the room a possible solution would be upgrading to a more powerful projector.  
+The initial experimentation with \cite{3D}'s prototype showed a number of limitations with the approach they took. The first is that the lighting the room must be controlled, as details in the gradients of the projected data may be lost with too much ambient lighting. Like anything projector related it works best in dim to dark room/places, depending on the type of projector. Normally we would not take a projector outside in the middle of the day and try to use it. Even inside can be too bright, teachers tend to shut off the lights closest to the screen when they use a projector. \cite{3D} mention that depending on the ambient lighting in the room one possible solution would be upgrading to a more powerful projector.  
 
 \subsection{Conclusion}
 \label{sec:Conclusion}
 
 \begin{quote}
-We have presented the use of SAR as a tool to enhance the process of 3D visualization. The paper defined our proposed use of SAR as a tool for 3D visualization with three different viewpoints. The first was a purposed set of SAR features to improve a user's ability to view, understand, and manipulate 3D visualization data. The second was an example tabletop SAR prototype to demon-strate a number of the possibilities. Finally a collection of three large scale possible applications of SAR was presented.
+We have presented the use of SAR as a tool to enhance the process of 3D visualization. The paper defined our proposed use of SAR as a tool for 3D visualization with three different viewpoints. The first was a purposed set of SAR features to improve a user's ability to view, understand, and manipulate 3D visualization data. The second was an example tabletop SAR prototype to demonstrate a number of the possibilities. Finally a collection of three large scale possible applications of SAR was presented.
 \end{quote}
 
 
@@ -117,7 +118,7 @@ We have presented the use of SAR as a tool to enhance the process of 3D visualiz
 \section{Acknowledgments}
 \label{sec:Acknowledgments}
 
-%\bibliographystyle{abbrv}
-%\bibliography{annotatedBibliography}
+\bibliographystyle{abbrv}
+\bibliography{annotatedBibliography}
 
 \end{document}
