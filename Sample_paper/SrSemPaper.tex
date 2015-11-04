@@ -30,14 +30,14 @@ Justin B. YaDeau\\
 \maketitle
 
 \begin{abstract}
-I will discuss two papers one paper goes over the use of thermal sensors to be able to utilize any real object with mobile technology and the other uses spatial augmented reality as a tool for 3D data visualization. Taking both of these ideas and putting them together is the goal of this paper. Imagine being able to interact with 3D data visualization, without having to actually touch an electronic device. This can reduce the amount of electronic devices needed for modern life.
+I will discuss two approaches in this paper; one approach goes over the use of thermal sensors to be able to utilize any real object with mobile technology and the other uses spatial augmented reality as a tool for 3D data visualization. Taking both of these ideas and putting them together is the goal of this paper. Imagine being able to interact with 3D data visualization, without having to actually touch an electronic device. This can reduce the amount of electronic devices needed for modern life.
 \end{abstract}
 
 \keywords{thermal interaction, 3D data visualization, augmented reality, AR, spatial augmented reality, SAR}
 
 \section{Introduction}
 \label{sec:Introduction}
-Imagine being able to touch a table and have a phone know where was touched. Now think of the same scenario, but this time the phone says the number 0 was pressed because the area touched corresponded to the number 0 on a dial pad see figure \ref{fig:numpad}. Kurz \cite{Thermal} wrote a paper on this very topic. Being able to use thermal technology to accurately tell if a surface was touched by a finger and where. Kurz \cite{Thermal} states that as wearable technology becomes more prominent alternative solutions to touch screens will be sought after. With that in mind being able to interact with technology with a screen would help advance the wearable technology.    
+Imagine being able to touch a table and have a phone know where was touched. Now think of the same scenario, but this time the phone says the number 0 was pressed because the area touched corresponded to the number 0 on a dial pad see figure \ref{fig:numpad}. Kurz \cite{Thermal} wrote a paper on this very topic. Being able to use thermal technology to accurately tell if a surface was touched by a finger and where. Kurz \cite{Thermal} states that as wearable technology becomes more prominent, alternative solutions to touch screens will be sought after. With that in mind being able to interact with technology with a screen would help advance the wearable technology.    
 
 Now think of a table that has a cone on it with projectors displaying data on cone. This is how Thomas et al. describes one of the ways to utilized spatial augmented reality as a tool for 3D data visualization (See figure \ref{fig:Tabletop}). Using technologies to track where the person being able to move the cone to define a new visualization. Also mentioning the scalability of the proposed system. CAVE systems would be the larger versions of the table top design mentioned above.      
 
@@ -50,7 +50,7 @@ Before starting this paper there are some concepts that should be made clear. It
 
 \subsection{Virtual Reality}
 \label{sec:Virtual Reality}
-Personally one of the more well known example of Virtual Reality (VR) today is the Oculus Rift. An earlier take on VR from Nintendo in the 90's is the Virtual Boy. Like the Oculus Rift the Virtual Boy is a device that strapped to the head of the user and used to simulate a virtual world mainly though sight. VR is nothing new another early example would be the view master, the stereoscopic toy that had circular inserts requiring the user to look into a light source to illuminate the picture. Being a more primitive the view masters still ''artificially creates sensory experiences, which can include sight, hearing, touch, and smell''\cite{VR}.       
+Personally, one of the more well known example of Virtual Reality (VR) today is the Oculus Rift. An earlier take on this type of VR from Nintendo in the 90's is the Virtual Boy. Like the Oculus Rift the Virtual Boy is a device that strapped to the head of the user and used to simulate a virtual world mainly though sight. VR is nothing new another early example would be the view master, the stereoscopic toy that had circular inserts requiring the user to look into a light source to illuminate the picture. Being a more primitive the view masters still ''artificially creates sensory experiences, which can include sight, hearing, touch, and smell''\cite{VR}.       
 
 \subsection{Augmented Reality}
 \label{sec:Augmented Reality}
@@ -65,43 +65,39 @@ Spatial Augmented Reality (SAR) enhances the visual aspects of physical objects,
 
 \subsection{6DOF}
 \label{sec:6DOF}
-6DOF, 6 degrees of freedom, are the different ways one can move in three dimensional space . From/back, left/right, up/down, roll, pitch, yaw are all the ways to move. Roll is moving clockwise or counter clockwise in relation to the front/back axis. Yaw is moving the front/back axis to either left/right axis. Pitch is the same yaw, except the up/down axis instead of the left/right axis. For any cerification see figure \ref{fig:6DOF}
+6DOF, 6 degrees of freedom, are the different ways one can move in three dimensional space. Front/back, left/right, up/down, roll, pitch, yaw are all the ways to move in 3D space. Roll is moving clockwise or counter clockwise in relation to the front/back axis. Yaw is moving the front/back axis to either left/right axis. Pitch is the same yaw, except the up/down axis instead of the left/right axis. For any cerification see figure \ref{fig:6DOF}
+
 \begin{figure}
 	\includegraphics[width=8.5cm, height=5cm]{6DOF_en}
-	\caption{Shows all the 6DOF axises \cite{6DOF}}
+	\caption{Shows the 6DOF axises related to 3D space \cite{6DOF}}
 	\label{fig:6DOF}
-\end{figure} 
+\end{figure}  
+
+
+\section{Thermal Interaction}
+\label{sec:Thermal Interaction}
+Kurz \cite{Thermal} provides a way to interact with AR applications using surfaces around in everyday life. Using infrared thermography, his system can detect if the user touched a surface or came close to touching it. Keeping in mind that one's finger(s) are warm and the surface is presumably cool, a touch leaves a heat signature on the cool surface. Kurz's system assumes that the interaction is taking place in a controlled environment where surfaces will be cooler than body temperature. When the thermal image detects a heat signature, the same system is able to determine the 3D position on the touched physical object. A series of tests were done using an array of materials and users to show the intuitive interaction with mobile AR and common surfaces. 
 
 \begin{figure}
 	\includegraphics[width=8.5cm, height=5cm]{Hardware2}
 	\caption{The hardware prototype used throughout Kurz's paper comprises a visible light camera and an infrared thermographic camera attached and connected to a tablet computer with a custom mount. \cite{Thermal}}
 	\label{fig:hardware}
-\end{figure} 
+\end{figure}
+
 \begin{figure*}
 	\includegraphics[width=18cm, height=5cm]{ThermalTesting}
 	\caption{Different materials used in Kurz's evaluation: (0) paper on a plastic table top, (1) ceramic, (2) rigid PVC, (3) foam plastic, (4) cardboard, (5) laminated fiber sheet, (6) glass, (7) thin plastic, (8) steel, (9) multi-layer board. \cite{Thermal}}
 	\label{fig:ThermalTest}
 \end{figure*}
-\section{Thermal Interaction}
-\label{sec:Thermal Interaction}
-
-Kurz \cite{Thermal} provides a way to interact with AR applications using objects or surfaces around everyday in everyday life. Using infrared thermography, his system can detect if the user touched a surface or came close to touching it. Keeping in mind one's finger(s) are warm and the surface is presumably cool, a touch leaves a heat signature on the cool surface. Kurz's system assumes that it takes place in a controlled environment where objects will be cooler then body temperature. When the thermal image detects a heat signature the same system is able to determine the 3D position on the touched physical object. 
-
 
 \subsection{Hardware}
 \label{Hardware}
-
-The hardware that Kurz's \cite{Thermal} setup used a camera mounted to a tablet computer as shown in figure \ref{fig:hardware}. This needed to be custom fitted since the technology for thermal imagery is not readily built into everyday devices like tablets or phones. The camera on the tablet mixes a visible light camera, and a infrared camera in one package. The visible light camera is able to capture RGB images a 480x360 pixels and the infrared at 160x120 pixels. The light parameters of the visible light camera \(K_v\) and the infrared camera \(K_t\) along with the 6DOF rigid body transformation from both cameras \(T_v\) (tTv) were calibrated offline. The calibration method Kurx used had a checkerboard pattern cut into bright cardboard then attached to a warm dark surface like an LCD screen. This is done so that the visible light camera sees dark squares on a light surface, but the infrared camera sees light squares on a dark surface. Allowing calibration of the parameters of both cameras and obtaining the 6DOF rigid body transformation (tTv).
-
-\todo[inline]{Find out how to do superscripts before a variable and image for the checkerboard example?}
+The hardware in Kurz's \cite{Thermal} set up was a camera mounted to a tablet computer as shown in Figure \ref{fig:hardware}. It needed to be custom fitted since the technology for thermal imagery is not typically built into everyday devices, like tablets or phones. The camera on the tablet mixes a visible light camera, and a infrared camera in one package. The visible light camera is able to capture RGB images at 480x360 pixels and the infrared at 160x120 pixels. The parameters of the visible light camera and the infrared camera along with the 6DOF rigid body transformation from both cameras were calibrated. The calibration method Kurz used had a checkerboard pattern cut into bright cardboard, then attached to a warm dark surface like an LCD screen. This is done so that the visible light camera sees dark squares on a light surface, but the infrared camera sees light squares on a dark surface.
 
 
 \subsection{Object Tracking}
 \label{Object Tracking}
-
-As mentioned above in Section \ref{sec:Thermal Interaction},  Kurz's desire is detecting touch in 3D space with real objects, which requires the ability to transform real objects relative to the camera. He used the Metaio SDK so that the visual light camera was able to get the position and orientation of the object(s). Metaio SDK is an object tracker that is able to find the position and orientation of an object relative to the visible light camera in real time \cite{Thermal}.  
-
-\todo[inline]{cite SDK and expand using it}
+As mentioned above,  Kurz's goal is detecting touch in 3D space with real objects, which requires the ability to transform real objects relative to the camera. Metaio is a AR company that developed an object tracking software that can find the position and orientation of an object relative to the visible light camera in real time \cite{Thermal}. He used the Metaio software so that the visual light camera on the prototype was able to get the position and orientation of the object(s) used in the experiments.    
 
 
 \begin{figure}
@@ -113,7 +109,7 @@ As mentioned above in Section \ref{sec:Thermal Interaction},  Kurz's desire is d
 
 \subsection{Thermal Detection}
 \label{Thermal Detection}
-The two main obstacles that Kurz brings us is detecting the touch in thermal imaging and being able to find where the touch occurred on a 3D object. First he explored temperature profiles of a surface being touched, obstructed, or not interacted with at all. The 4 cases of temperatures profiles are: Object only, Hand only, obstruction by hand, and touch by hand. Object only is just using the cameras to measure the relative constant temperature of an object. Hand only measured the temperature of a hand expecting moderate temperature changes. Obstruction by hand starts with detecting an object having a hand come between the object and the camera, not touching the object. The infrared will detect the rapid change from cool surface to a warm body then rapidly back to the cool surface. Touch by hand is when the object is actually touched. For the temperature it will start with the cool surface the warm body obstructs the area then once the hand moves away instead of a rapid change back to a cool surface there is a rapid decrease to a temperature between that of the hand and the object. After the rapid decrease the area will slowly cool, reverting to the starting temperature. 
+The two main obstacles that Kurz brings up is detecting the touch in thermal imaging, and being able to find where the touch occurred on a 3D object. First he explored temperature profiles of a surface being touched, obstructed, or not interacted with at all. The 4 cases of temperatures profiles are: Object-only, hand-only, obstruction-by-hand, and touch-by-hand. Object-only is just using the cameras to measure the relative constant temperature of an object. Hand only measured the temperature of a hand, expecting moderate temperature changes relative to fluctuating body temperature. Obstruction by hand starts with detecting an object and then having a hand come between the object and the camera, while not touching the object. The infrared will detect the rapid change from cool surface to a warm body, then rapidly back to the cool surface. Touch by hand is when the object is actually touched. The observed temperature  will start with the cool surface temperature and then rise when the warm body obstructs the area. Then once the hand moves away instead of a rapid change back to a cool surface there is a rapid decrease to a temperature between that of the hand and the object. After this initial rapid decrease the area will slowly cool, reverting back to the starting temperature. 
  
 \(
 \begin{matrix}
@@ -126,52 +122,58 @@ Above is the OpenCV SimpleBlobDetector that Kurz used to calculate the sized of 
 
 \subsection{Materials Tested}
 \label{Materials Tested}
-The blob detector is designed to handle objects that differ in material and temperature. This should also work for different users that have differing finger or body temperatures, also the touch time and pressure would most likely be different. Kurz tested the algorithm with an array of materials one would encounter everyday. This consisted of different applicants touching different surfaces at different temperatures \cite{3D}. Figure \ref{fig:ThermalTest} is the testing environment Kurz used to test different materials. The materials tested are paper, plastics, glass, and metal. Being placed on the table centered with the camera, and the camera is 300 mm from the table top. Using four different people in a controlled office environment with ambient temperature at \(25^o\)C. A different group of four people did the same experiment, but outside in temperature of \(12^o\)C. Leaving the test samples in the environment that they would be tested in for around thirty minutes to ensure they conformed to the environments temperature. The test consisted of having the person first pass their hand between the material and the camera, not touching the material. After that they were told just to touch the middle of the material as if it were a key on a keyboard. Notably it was not specified which finger to use and how to have the finger leave the object, leaving that entirely up to the subject. After this test was done Kurz had around 400 thermal images with a time stamp and labeled according to the action, material and testers name. The results of the tests ran showed that number 8, steel, from figure \ref{Materials Tested} does not work well with thermal interaction. This is due to the high rate at which steel dissipates heat, making it difficult to detect using their method. The data collected on steel was removed from figure \ref{fig:TouchData}. Out of the remaining 9 material sequences only two detected a touch in the wrong area. Material 6, glass, from the outside tests had these false positives because the sticker appears warmer then the glass outdoors. 7 sequences could not detect touch due to the short period of contact. The false positives in the sequences without touch in figure \ref{fig:TouchData} were quite high. This was attributed to residual heat left during the placement of the material under the camera. 
+The blob detector is designed to handle objects that differ in material and temperature. This should also work for different users that have differing finger or body temperatures. The touch time and pressure would most likely be different for user to user. Kurz tested the algorithm with an array of materials one would encounter everyday. This consisted of different applicants touching different surfaces at different temperatures \cite{3D}. Figure \ref{fig:ThermalTest} is the testing environment Kurz used to test different materials. The materials tested are paper, plastics, glass, and metal, being placed on the table centered with the camera, and the camera is 300 mm from the table top. The test involved four different people in a controlled office environment with ambient temperature at \(25^o\)C. 
+
+A different group of four people did the same experiment, but outside in temperature of \(12^o\)C, leaving the test samples in the environment that they would be tested in for around thirty minutes to ensure they conformed to the environments temperature. The test consisted of having the person first pass their hand between the material and the camera, not touching the material. After that they were told just to touch the middle of the material as if it were a key on a keyboard. Notably it was not specified which finger to use and how to have the finger leave the object, leaving that entirely up to the subject. 
+
+After this test was done Kurz had around 400 thermal images with a time stamp and labeled according to the action, material and testers name. The results of the tests showed that number 8, steel, from Figure \ref{fig:ThermalTest} does not work well with thermal interaction. This is due to the high rate at which steel dissipates heat, making it difficult to detect using their method. The data collected on steel was removed from Figure \ref{fig:TouchData}, because of steels inability to retain heat. Out of the remaining 9 material sequences only two detected a touch in the wrong area, the rest detected touched areas correctly. Material 6, glass, from the outside tests had a false positives because the sticker appears warmer then the glass outdoors. 7 sequences could not detect touch due to the short period of contact. The false positives in the sequences without touch in figure \ref{fig:TouchData} were quite high. This was attributed to residual heat left during the placement of the material under the camera. 
 
 \subsection{Applications}
 \label{Applications}
 
 \begin{figure}
 	\includegraphics[width=8cm, height=8cm]{numpad}
-	\caption{A number pad on a granite countertop seen through the screen of the mobile device \cite{Thermal}.}
+	\caption{A number pad on a granite countertop seen through the screen of a mobile device \cite{Thermal}.}
 	\label{fig:numpad}
 \end{figure}
 
-Since the prototype was a more of a hand held device Kurz focuses on wearable technology and head-mounted displays when no touch screens are available. Two of the main applications mentioned in the paper are Spray-On GUI's and augmented floor plans. Spray-On GUI's utilizes any surface available to you, an example would be a granite countertop (see figure \ref{fig:numpad}). Calling it instance tracking, which creates an image and can track it. The camera can move around freely and the object remains in one place. When one of the keys is touched the camera is able to determine the corresponding key that was touched bales on the location in the thermal image. The AR floor plans is where there is a printed floor plan of a building, lets say a mall. That allows the user to press the desired location on floor plan that would display information of the shop or location pressed, such as name, business hours, ratings, and contact information. With this approach there would be not need for a Spray-on GUI since the camera would use the shapes of the floor plan in lieu of virtual buttons.          
+Since the prototype from Figure \ref{fig:hardware} was a more of a hand held device Kurz mentions that the thermal interaction could be possible with wearable technology, or head-mounted displays. If this method is applied to wearable technology, or head-mounted displays it would be a solution when no touch screens are available. An example of wearable technology would be a smart watch. For head-mounted displays one example would Google Glass.    
+
+Two of the main applications mentioned in the paper are Spray-On GUIs and augmented floor plans. Spray-On GUIs utilize any surface available to you, an example would be a number pad on a granite countertop (see Figure \ref{fig:numpad}). This application spays on a virtual number pad onto a surface, looking on the surface of the device it is possible to dial numbers. Once sprayed on the GUI stays in one place Kurz called it instance tracking, which creates an image and can track it. The camera can move around freely and the object remains in one place. When one of the keys is touched the camera is able to determine the corresponding key that was touched based on the location in the thermal image. 
+
+The AR floor plan is used when there is a printed floor plan of a building, for example a mall. The AR floor plan allows a user to press his/hers desired location on the floor plan. This would then display the information of the shop or location pressed, such as name, business hours, ratings, and contact information. With this approach there would be no need for a Spray-on GUI since the camera would use the shapes of the floor plan in lieu of virtual buttons.          
 
 
-\section{3D Data Visualization}
+\section{3D Data Visualization with SAR}
 \label{sec:3D Data Visualization}
-I will now focus on a paper that explores the use of SAR as a tool for 3D data visualization. As we know from Section \ref{sec:Spatial Augmented Reality}, SAR uses projectors to augment what is already there. Thomas et al. \cite{3D} focus more on 3D data visualization, and not manipulation. Being able to see and touch the data is their main focus. Pushing the idea that using multiple inputs, sight and touch, to help you remember the data being displayed. They \cite{3D} define their proposed use of SAR as a tool for 3D visualization in following ways. First they propose the use of SAR to benefit user's ability to see, understand, and manipulate 3D visualization data. Second is the tabletop SAR prototype that is able to demonstrate many possibilities. Figure \ref{fig:Tabletop}  is an image of their prototype tabletop SAR system. The projections on the physical props define areas of investigation in a 3D volume. The 4K monitor provides detail views of the data in a 2D space. Third is the large applications of SAR, called \textit{CAVE} it is discussed later in this section.
+I will now focus on a paper that explores the use of SAR as a tool for 3D data visualization. As mentioned from Section \ref{sec:Spatial Augmented Reality}, SAR uses projectors to augment what is already there. Thomas et al. focus more on 3D data visualization, and not manipulation \cite{3D}. Being able to see and touch the data is their main focus, because using multiple inputs can to help you remember the data being displayed. They define their proposed use of SAR as a tool for 3D visualization in following ways. First they propose the use of SAR to benefit the user ability to see, understand, and manipulate 3D visualization data. Second is the tabletop SAR prototype (see Figure \ref{fig:Tabletop}) that is able to demonstrate many possibilities. Some of which would include charts, maps, or graphs. The projections on the physical object defines areas of investigation in a 3D volume. The monitor provides detailed views of the data in a 2D space. Third is the large applications of SAR, called \textit{CAVE} which is discussed later in this section.
 
+\todo[inline]{Expand}
 
 \subsection{Visualizing Data}
 \label{sec:Visualizing Data}
-Data visualization is the representation of data visually. Some basic examples would be pie charts, scatter-plots, bar charts, and the can list goes on. Data visualization can be used in any field, from showing the demographic of a neighborhood to displaying how many shooting stars happen over the course of a year. Visualizing data is also an effective way to show information quickly and efficiently. Humans tend to recall pictures easier than words. That is why there are many different types of charts. As mentioned in \ref{sec:Data Visualization}, the wide range of the types of data you can visualize makes what the papers proposes versatile in the real world.      
-
+Data visualization is the representation of data visually. Some basic examples would be pie charts, scatter-plots, bar charts, and the can list goes on. Data visualization can be used in any field, from showing the demographic of a neighborhood to displaying how many shooting stars happen over the course of a year, or even weather maps. Visualizing data is an effective way to show information quickly and efficiently. Humans tend to recall pictures easier than words. That is why there are many different types of charts. As mentioned above, the wide range of data types you can visualize makes what the papers proposes versatile in the real world.       
 
 \begin{figure}
 	\includegraphics[width=8.5cm, height=5cm]{Tabletop}
-	\caption{Tabletop setup \cite{3D}}
+	\caption{the tabletop set up that Thomas et al. propose \cite{3D}}
 	\label{fig:Tabletop}
 \end{figure}
+
 \subsection{Applications}
 \label{sec:Applications}
+The paper mentions two ways that 3D data visualization can be applied in the real world. The main one they mention is the tabletop. This is a proposed system where there is a 2D display (they call it a fish tank view), a table with the physical object(s), the virtual volume, the hand held pointing device, 6DOF trackers, and the projectors (see Figure\ref{fig:Tabletop}). The virtual volume is the space around the table top, starting from the surface of the table extending up a foot or two. In the virtual volume one could zoom in, or out, on the data being visualized. An example would be displaying the weather maps of North America then zooming in on the north west region, or zoom out to displaying more of the world.  
 
-The paper mentions two ways that 3D data visualization can be applied in the real world. The main one they mention is the tabletop. This is a proposed system where there is a 2D display, they call it a fish tank view, a table with the physical object(s), the virtual volume, the hand held pointing device, 6DOF trackers, and the projectors. The virtual volume is the space around the table top, starting from the surface of the table extending up a foot or two. 
-
-The CAVE is larger scale version of the tabletop method. Using walls as the physical objects to project onto. This would require a lot more space, 6DOF tracers, and projectors to get it set up. The benefit the cave model is being able to increase the number of collaborators/viewers. Figure \ref{fig:Cave} is one of a couple CAVE variations possible with this technology.
+The CAVE is larger scale version of the tabletop method, using walls as the physical objects to project onto. This would require a lot more space, 6DOF tracers, and projectors to get it set up. The benefit the CAVE model is being able to increase the number of collaborators/viewers. Figure \ref{fig:Cave} is one of a couple CAVE variations possible with this technology. The scenarios that would benefit from the CAVE over the table top method would be larger scale of collaboration or the need to display the visual date to a larger audience, like a class.
 
 \subsection{Limitations}
 \label{sec:Limitations}
-
-The initial experimentation with Thomas et al. \cite{3D} prototype showed a number of limitations with the approach they took. The first is that the lighting the room must be controlled, as details in the gradients of the projected data may be lost with too much ambient lighting. Like anything projector related it works best in dim to dark room/places, depending on the type of projector. Normally we would not take a projector outside in the middle of the day and try to use it. Even inside can be too bright, teachers tend to shut off the lights closest to the screen when they use a projector. \cite{3D} mention that depending on the ambient lighting in the room one possible solution would be upgrading to a more powerful projector.
+The initial experimentation with Thomas et al. \cite{3D} prototype showed a number of limitations with the approach they took. The first is that the lighting the room must be controlled, as details in the gradients of the projected data may be lost with too much ambient lighting. Like anything projector-related, it works best in dim to dark room/places, depending on the type of projector. Normally we would not take a projector outside in the middle of the day and try to use it. Even inside can be too bright; teachers tend to shut off the lights closest to the screen when they use a projector. they mention that depending on the ambient lighting in the room one possible solution would be upgrading to a more powerful projector. 
+\todo[inline]{Expand}
 
 \subsection{Conclusion}
 \label{sec:Conclusion}
-
-The goal of Thomas et al. \cite{3D} was presenting SAR as a tool to enrich the process of 3D visualization. They layout their plan on using SAR with these three points. One is purposed features to benefit the use's abilities interpret the data. The second point being the example of a tabletop prototype (see figure \ref{fig:Tabletop}) showing the flexibility of this as a 3D visualization tool. Lastly the larger scale CAVE applications as ways to increase possible collaboration size.      
-
+The goal of Thomas et al. \cite{3D} was presenting SAR as a tool to enrich the process of 3D visualization. They layout their plan on using SAR with these three goals. They start by explaining the benefit to the user's abilities to interpret and retain the data being presented. The second goal was the implementation of the table-top they proposed. Letting the user manipulate the data by zooming in or out, this way the user handles the data improving retention of the information. Lastly, increasing the possible applications of visualizing 3D data with SAR buy proposing the CAVE system. The CAVE would allow more people to view the data being displayed at one time.
 
 \begin{figure}
 	\includegraphics[width=8.5cm, height=5cm]{Cave}
@@ -179,22 +181,22 @@ The goal of Thomas et al. \cite{3D} was presenting SAR as a tool to enrich the p
 	\label{fig:Cave}
 \end{figure}  
 
-
 \section{Joining Together}
 \label{sec:Joining Together}
-Both sections \ref{sec:Thermal Interaction} and \ref{sec:3D Data Visualization} were fascinating papers papers to read. Reading them both in one day got me thinking of the possibility of mixing those two approaches. In section \ref{sec:3D Data Visualization} a 6DOF object is needed to track ones position, but with the Thermal Interactions section, \ref{sec:Thermal Interaction}, the camera is able to detect positions of objects using viable light cameras.  
+Both sections \ref{sec:Thermal Interaction} and \ref{sec:3D Data Visualization} dont seem like they fit together. This section is dedicated to joining those two sections together, and how they could work together. In section \ref{sec:3D Data Visualization} a 6DOF object is needed to track ones position, but with the Thermal Interactions section, \ref{sec:Thermal Interaction}, the camera is able to detect positions of objects using viable light cameras. If we know the position of the object we can find the position of the person.  
+
+\subsection{Applications}
+\label{Applications}
+Some of the possible application would consist of education, transportation, and . With education the proposed idea would be for a class to ware head-mounted displays containing a visible light camera and a thermal camera. Each students would essentially become the table top mentioned from Figure \ref{fig:Tabletop} with a physical object.
+
+Transportation would benefit form the ability to detect where a user wants to go and then display the information pertaining to route and time the train, bus, or light rail would take.
 
 \subsection{Strengths and Weaknesses}
 \label{Strengths and Weaknesses}
 
-\subsection{Applications}
-\label{Applications}
 
 \subsection{Conclusion}
 \label{Conclusion}
-
-\section{Alternate Interactions}
-\label{sec:Alternate Interactions}
 
 \section{Acknowledgments}
 \label{sec:Acknowledgments}
