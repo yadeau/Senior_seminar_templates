@@ -71,24 +71,49 @@
 % - Talk about 30s to 2min per frame. So there should probably be between
 %   15 and 30 frames, all told.
 
-%\section*{Overview}
+\section*{Overview}
 
-%\subsection*{Background}
+\subsection*{Background}
 
-%\begin{frame}
-%  \frametitle{Background}
+\begin{frame}
+
+  \frametitle{Background}
   
-%  \begin{columns}
-%  \begin{column}{0.6\textwidth}
-%  \begin{itemize}
-%  	\item Virtual Reality
-%	\item Augmented Reality
-%	\item Spatial Augmented reality
-%	\item 6DOF
-%  \end{itemize}
-%  \end{column}
-%  \end{columns}
-%\end{frame}
+  \begin{columns}
+  \begin{column}{0.6\textwidth}
+  \begin{itemize}
+  	\item Virtual Reality
+	\item Augmented Reality
+	\item Spatial Augmented Reality
+	\item 6DOF
+  \end{itemize}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Virtual Reality}
+	\begin{itemize}
+		\item Completely Virtual
+		\item The Matrix 
+		\item Oculus Rift
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Augmented Reality}
+	
+	\includegraphics[width=\textwidth]{images/google-translate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Spatial Augmented Reality}
+\end{frame}
+
+\begin{frame}
+	\frametitle{6DOF}
+	\includegraphics[width=\textwidth]{../Sample_paper/images/6DOF_en}
+\end{frame}
 
 \subsection*{Outline}
 \begin{frame}
@@ -98,27 +123,64 @@
 
 \section[Mobile Thermal Interaction]{Thermal interaction with mobile devices}
 
+\subsection{Hardware}
+\begin{frame}
+\frametitle{Hardware}	
+
+	\includegraphics[width=\textwidth]{../Sample_paper/images/Hardware2}
+	
+\end{frame}
+
+\subsection{Thermal Detection}
+\begin{frame}
+\frametitle{Thermal Detection}
+	\begin{itemize}
+		\item Assumes a controlled environment
+		\item Object-only, hand-only, obstruction-by-hand, and touch-by-hand
+		\item Interactions leave thermal impressions on the object
+		\item Using the OpenCV SimpleBlobDetector
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{OpenCV SimpleBlobDetector}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{frame}
+
+\subsection{Object Tracking}
+\begin{frame}	
+\frametitle{Object Tracking}
+\end{frame}
+
+\subsection{Materials Tested}
+\begin{frame}	
+\frametitle{Materials Tested}
+\end{frame}
+
+
+
 \subsection{Applications}
 
 \begin{frame}
 	\frametitle{Applications}
 	Applications that use thermal imaging with mobile technology 
 	\begin{itemize}
-		\item "Spray on" GUIs
+		\item "Spray on" graphical user interfaces (GUI)
 		\item Augmented floor plans
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{"Spray on" GUIs}
-	
+	\frametitle{"Spray on" GUIs}	
 	\begin{columns}
 	\begin{column}{0.45\textwidth}
 	\begin{itemize}
-		\item What are Spray on GUIs?  
-		\item Usability
-	\end{itemize}
-		
+		\item The screen displays a dial pad, but there is no dial pad on the surface
+		\item Looking at the screen to interact with dial pad
+		\item Devices without touch screens
+	\end{itemize}		
 	\end{column}
 	\begin{column}{0.55\textwidth}
 	\includegraphics[width=\textwidth]{../Sample_paper/images/numpad}
@@ -126,30 +188,87 @@
 	\end{columns}
 \end{frame}
 
-%\begin{frame}
-%	\frametitle{Augmented floor plans}
-%	\begin{columns}
-%	\begin{column}{0.45\textwidth}
-%	\begin{itemize}
-%		\item 
-%	\end{itemize}
-%	\end{column}
-%	\begin{column}{0.55\textwidth}
-%	\includegraphics[width=\textwidth]{images/AugmentedFloorPlans}
-%	\end{column}
-%	\end{columns}
-	
-%\end{frame}
-
-\section[Using SAR for 3D data visualization]{Using SAR for 3D data visualization}
 \begin{frame}
-\frametitle{Using SAR for 3D data visualization}
+	\frametitle{Augmented Floor Plans}
+	\begin{columns}
+	\begin{column}{0.45\textwidth}
+	\begin{itemize}
+		\item Similar interaction, different interface
+		\item Using number sections as buttons
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.55\textwidth}
+	\includegraphics[width=\textwidth]{images/AugmentedFloorPlans}
+	\end{column}
+	\end{columns}
+	
 \end{frame}
 
+\section[Using spatial augmented reality for 3D data visualization]{Using spatial augmented reality for 3D data visualization}
+
+\subsection{Visualizing Data}
+\begin{frame}	
+\frametitle{Visualizing Data}
+	\begin{itemize}
+		\item Representing data visually
+		\item Examples: weather maps, pie and bar charts, etc
+		\item The importance of visualizing data
+	\end{itemize}
+\end{frame}
+
+\subsection{Applications}
+\begin{frame}
+\frametitle{Applications}
+	Applications that use spatial augmented reality for 3D data visualization   
+	\begin{itemize}
+		\item Table-Top
+		\item CAVE
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Table-Top} 
+	\begin{itemize}
+		\item Using a hand held pointing device a user can zoom in or out of the visualization 
+		\item The interactions happen inside the virtual volume
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Table-Top} 
+\includegraphics[width=\textwidth]{../Sample_paper/images/Tabletop}
+\end{frame}
+
+\begin{frame}
+\frametitle{CAVE}
+	\begin{itemize}
+		\item Larger area than the table-top method
+		\item Increase in collaborators/viewers
+		\item Similar interactions as the table-top method
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{CAVE}
+\includegraphics[width=\textwidth]{../Sample_paper/images/CAVE}
+\end{frame}
+
+\subsection{Limitations}
+\begin{frame}	
+\frametitle{Limitations}
+	\begin{itemize}
+		\item Strength of the projectors 
+		\item Needing a controlled environment 
+		\item Solutions
+	\end{itemize}
+\end{frame}
 
 \section[Conclusions]{Conclusions}
 \begin{frame}
 \frametitle{Conclusions}
+	\begin{itemize}
+		\item 
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
