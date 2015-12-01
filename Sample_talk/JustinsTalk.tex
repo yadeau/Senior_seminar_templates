@@ -5,12 +5,14 @@
   \usetheme{Montpellier}
   \usecolortheme{beaver}
   \setbeamercovered{transparent}
+  
 }
 
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{times}
 \usepackage[T1]{fontenc} 
+
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 \usepackage{amsmath}
@@ -93,21 +95,25 @@
 
 \begin{frame}
 	\frametitle{Virtual Reality}
+	\begin{columns}
+    \begin{column}{0.6\textwidth}
 	\begin{itemize}
 		\item Completely Virtual
 		\item The Matrix 
 		\item Oculus Rift
 	\end{itemize}
+	\end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Augmented Reality}
-	
 	\includegraphics[width=\textwidth]{images/google-translate}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Spatial Augmented Reality}
+	\includegraphics[width=\textwidth]{images/Augmented-Reality-Sandbox}
 \end{frame}
 
 \begin{frame}
@@ -144,21 +150,30 @@
 
 \begin{frame}
 \frametitle{OpenCV SimpleBlobDetector}
+	\(
+\begin{matrix} \\
+ t_{1}=(1-{1\over 16})t_{ min}+{1\over 16}t_{ max} & t_{2}=(1-{3\over 8})t_{ min}+{3\over 8}t_{ max}\cr 
+ \end{matrix} 
+\)
+
 	\begin{itemize}
-		\item 
+		\item \(t_{1}\) and \(t_{2}\) is the expected temperature range of the interaction
+		\item With a fixed size range of \(0.32cm^2\) and \(1.54cm^2\)
 	\end{itemize}
 \end{frame}
 
 \subsection{Object Tracking}
 \begin{frame}	
 \frametitle{Object Tracking}
+	\includegraphics[width=\textwidth]{../Sample_paper/images/Tracking}
+
 \end{frame}
 
-\subsection{Materials Tested}
-\begin{frame}	
-\frametitle{Materials Tested}
-\end{frame}
-
+%\subsection{Materials Tested}
+%\begin{frame}	
+%\frametitle{Materials Tested}
+%\includegraphics[width=\textwidth]{../Sample_paper/images/ThermalTesting}
+%\end{frame}
 
 
 \subsection{Applications}
@@ -256,18 +271,24 @@
 \subsection{Limitations}
 \begin{frame}	
 \frametitle{Limitations}
+    \begin{columns}
+    \begin{column}{.8\textwidth}
 	\begin{itemize}
 		\item Strength of the projectors 
 		\item Needing a controlled environment 
 		\item Solutions
 	\end{itemize}
+	\end{column}
+	\end{columns}
 \end{frame}
 
 \section[Conclusions]{Conclusions}
 \begin{frame}
 \frametitle{Conclusions}
 	\begin{itemize}
-		\item 
+		\item Utilizing both of these approaches would make new applications possible
+		\item Examples: education and transportation
+
 	\end{itemize}
 \end{frame}
 
