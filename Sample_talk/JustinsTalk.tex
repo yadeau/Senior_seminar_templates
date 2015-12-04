@@ -23,13 +23,14 @@
 \newcommand{\tablewin}[1]{\tableemph{#1}}
 \newcommand{\tablemid}[1]{\tableemph{#1}}
 \newcommand{\tablelose}[1]{\tableemph{#1}}
+\setbeamertemplate{navigation symbols}{}
 
 \definecolor{MyLightGray}{rgb}{0.6,0.6,0.6}
 \newcommand{\tabletie}[1]{\color{MyLightGray} {#1}}
 
 % The text in square brackets is the short version of your title and will be used in the
 % header/footer depending on your theme.
-\title[Thermal Interaction In SAR]{Thermal Interaction in \\ Spatial Augmented Reality}
+\title[Thermal Interaction In SAR]{Thermal Interaction \& \\ 3D Data Visualization}
 
 % Sub-titles are optional - uncomment and edit the next line if you want one.
 % \subtitle{Why does sub-tree crossover work?} 
@@ -75,50 +76,11 @@
 
 \section*{Overview}
 
-\subsection*{Background}
-
+\subsection*{Thermal Interaction \& 3D Data Visualization}
 \begin{frame}
-
-  \frametitle{Background}
-  
-  \begin{columns}
-  \begin{column}{0.6\textwidth}
-  \begin{itemize}
-  	\item Virtual Reality
-	\item Augmented Reality
-	\item Spatial Augmented Reality
-	\item 6DOF
-  \end{itemize}
-  \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Virtual Reality}
-	\begin{columns}
-    \begin{column}{0.6\textwidth}
 	\begin{itemize}
-		\item Completely Virtual
-		\item The Matrix 
-		\item Oculus Rift
+		\item What would thermal interaction \& 3D data visualization look like? 
 	\end{itemize}
-	\end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Augmented Reality}
-	\includegraphics[width=\textwidth]{images/google-translate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Spatial Augmented Reality}
-	\includegraphics[width=\textwidth]{images/Augmented-Reality-Sandbox}
-\end{frame}
-
-\begin{frame}
-	\frametitle{6DOF}
-	\includegraphics[width=\textwidth]{../Sample_paper/images/6DOF_en}
 \end{frame}
 
 \subsection*{Outline}
@@ -127,14 +89,65 @@
   \tableofcontents[hideallsubsections]
 \end{frame}
 
+\section{Background}
+
+\subsection{Virtual Reality}
+\begin{frame}
+	\frametitle{Virtual Reality}
+	\begin{columns}
+    \begin{column}{0.4\textwidth}
+	\begin{itemize}
+		\item Completely Virtual
+		\item The Matrix 
+		\item Oculus Rift
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+	\includegraphics[width=\textwidth]{images/OculusRift}
+	\end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Augmented Reality}
+\begin{frame}
+	\frametitle{Augmented Reality}
+	\includegraphics[width=\textwidth]{images/google-translate}
+\end{frame}
+
+\subsection{Spatial Augmented Reality}
+\begin{frame}
+	\frametitle{Spatial Augmented Reality}
+	\includegraphics[width=\textwidth]{images/Augmented-Reality-Sandbox}
+\end{frame}
+
+\subsection{6DOF}
+\begin{frame}
+	\frametitle{6DOF}
+	\includegraphics[width=\textwidth]{../Sample_paper/images/6DOF_en}
+\end{frame}
+
 \section[Mobile Thermal Interaction]{Thermal interaction with mobile devices}
+
+\subsection{Interacting with Objects}
+\begin{frame}
+\frametitle{Interactions with Objects}	
+	\begin{columns}
+    \begin{column}{0.7\textwidth}
+	\includegraphics[width=\textwidth]{images/Thermal}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+	\begin{itemize}
+		\item Interactions leave thermal impressions on the object
+		\item Using these impressions to interact with a device in a new way 
+	\end{itemize}	
+	\end{column}
+    \end{columns}
+\end{frame}
 
 \subsection{Hardware}
 \begin{frame}
 \frametitle{Hardware}	
-
 	\includegraphics[width=\textwidth]{../Sample_paper/images/Hardware2}
-	
 \end{frame}
 
 \subsection{Thermal Detection}
@@ -143,30 +156,32 @@
 	\begin{itemize}
 		\item Assumes a controlled environment
 		\item Object-only, hand-only, obstruction-by-hand, and touch-by-hand
-		\item Interactions leave thermal impressions on the object
 		\item Using the OpenCV SimpleBlobDetector
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{OpenCV SimpleBlobDetector}
+\begin{center}
 	\(
 \begin{matrix} \\
  t_{1}=(1-{1\over 16})t_{ min}+{1\over 16}t_{ max} & t_{2}=(1-{3\over 8})t_{ min}+{3\over 8}t_{ max}\cr 
  \end{matrix} 
 \)
-
+\end{center}
 	\begin{itemize}
 		\item \(t_{1}\) and \(t_{2}\) is the expected temperature range of the interaction
 		\item With a fixed size range of \(0.32cm^2\) and \(1.54cm^2\)
 	\end{itemize}
+	\begin{center}
+\includegraphics[width=6cm]{images/Thermal}
+\end{center}
 \end{frame}
 
 \subsection{Object Tracking}
 \begin{frame}	
 \frametitle{Object Tracking}
 	\includegraphics[width=\textwidth]{images/Tracking}
-
 \end{frame}
 
 %\subsection{Materials Tested}
@@ -215,8 +230,7 @@
 	\begin{column}{0.55\textwidth}
 	\includegraphics[width=\textwidth]{images/AugmentedFloorPlans}
 	\end{column}
-	\end{columns}
-	
+	\end{columns}	
 \end{frame}
 
 \section[Using spatial augmented reality for 3D data visualization]{Using spatial augmented reality for 3D data visualization}
@@ -225,7 +239,7 @@
 \begin{frame}	
 \frametitle{Visualizing Data}
 	\begin{itemize}
-		\item Representing data visually
+		\item Representing data with images
 		\item Examples: weather maps, pie and bar charts, etc
 		\item The importance of visualizing data
 	\end{itemize}
@@ -234,7 +248,7 @@
 \subsection{Applications}
 \begin{frame}
 \frametitle{Applications}
-	Applications that use spatial augmented reality for 3D data visualization   
+	Some applications that use spatial augmented reality for 3D data visualization   
 	\begin{itemize}
 		\item Table-Top
 		\item CAVE
@@ -313,8 +327,8 @@
     \begin{column}{.8\textwidth}
 	\begin{itemize}
 		\item Strength of the projectors 
-		\item Needing a controlled environment 
-		\item Solutions
+		\item Need for a controlled environment for projectors and 6DOF trackers
+		\item Solution
 	\end{itemize}
 	\end{column}
 	\end{columns}
@@ -324,7 +338,7 @@
 \begin{frame}
 \frametitle{Conclusions}
 	\begin{itemize}
-		\item Utilizing both of these approaches would make new applications possible
+		\item Utilizing both thermal interaction and 3D data visualization new applications are possible
 		\item Examples: education and transportation
 
 	\end{itemize}
