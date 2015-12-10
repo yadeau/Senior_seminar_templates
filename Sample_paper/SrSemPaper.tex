@@ -6,7 +6,7 @@
 \usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{url}
-\linespread{.98}
+\linespread{.97}
 
 \begin{document}
 \conferenceinfo{UMM CSci Senior Seminar Conference, December 2015}{Morris, MN}
@@ -32,7 +32,7 @@ Justin B. YaDeau\\
 \maketitle
 
 \begin{abstract}
-I will discuss two approaches in this paper. One approach goes over the use of thermal sensors to be able to utilize most surfaces with mobile technology. The other approach uses spatial augmented reality as a tool for 3D data visualization. Taking these ideas and putting them together is the goal of this paper. A phone having the ability to know exactly where a user puts their finger, and correlate that to a program or some other process, would be helpful in advancing the use of smaller mobile technology. Other advances would include being able to interact with charts, maps, or graphs without having to touch an electronic device. This can reduce the amount of electronic devices needed for modern life. I will discuss both studies and then join them together in a way to minimizes the limitations that each has. This paper will discus the possible applications that would be possible when joining these methods and how they benefit us.
+Using two approaches, it is possible to use thermal interaction to interact with 3D data visualization. One approach goes over the use of thermal sensors to be able to utilize most surfaces with mobile technology. The other approach uses spatial augmented reality as a tool for 3D data visualization. Taking these ideas and putting them together is the goal of this paper. A phone that has the ability to know exactly where a user puts their finger on a surface, and correlate that to a program or some other process, would be helpful in advancing the use of smaller mobile technology. Other advances would include being able to interact with charts, maps, or graphs without having to touch an electronic device. This can reduce the amount of electronic devices needed for modern life. I will discuss both studies and then join them together in a way to minimizes the limitations that each has. This paper will discus the possible applications that would be possible when joining these methods and how they benefit us.
 \end{abstract}
 
 \keywords{thermal interaction, 3D data visualization, augmented reality, AR, spatial augmented reality, SAR}
@@ -50,7 +50,7 @@ Before talking about how those types of applications work an overview on backgro
 \label{sec:background} 
 Before starting this paper, there are some concepts that should be made clear. It will be helpful to have a clear understanding of the differences between virtual reality, augmented reality, and spatial augmented reality. Also, knowing the concept of six degrees of freedom is beneficial.  
 
-\subsection{Virtual, Augmented, and Spatial Augmented  Realities}
+\subsection{Virtual and Augmented Realities}
 \label{sec:Reality}
 \textit{Virtual reality} (VR) is when a system ``artificially creates sensory experiences, which can include sight, hearing, touch, and smell'' \cite{VR}. The most common experiences that VR creates for a user are through the use of sight and sound. A recent example of Virtual Reality is the Oculus Rift. An earlier take on this type of VR is the Virtual Boy, from Nintendo in the 90's. Like the Oculus Rift, the Virtual Boy is a device that strapped to the head of the user and is used to simulate a virtual world. As you turn your head, the field of view in the virtual world will change accordingly. An earlier example would be the view master. It is a stereoscopic toy that uses circular inserts that require the user to look into a light source to illuminate the picture. Being more primitive, the view master creates a 2D visual experience that does not move.       
 
@@ -62,7 +62,7 @@ SAR enhances the visual aspects of physical objects, allowing users to better un
 \end{quote} 
 A good example of SAR is an augmented sandbox. A user has a sandbox with a topographical map overlaid onto the sand. They could move the sand around and the projector would be able to detect the height of the sand. In real time the projector would match the peaks and valleys in the sand with the correct topographic overlay. 
 
-\subsection{6DOF}
+\subsection{Interactions In 3D Space}
 \label{sec:6DOF}
 In order to use any object to interact with system, it needs to know where the object is in relation to the cameras observing it. 6 degrees of freedom (6DOF) are the different ways one can move in three dimensional space. Front/back, left/right, up/down, roll, pitch, yaw are all the ways to move in 3D space. Roll is rotating in relation to the front/back axis. Yaw is rotating in relation to the up/down axis. Pitch is rotating in relation to the left/right axis. For clarification see Figure \ref{fig:6DOF}.
 
@@ -111,16 +111,16 @@ As mentioned above,  Kurz's goal is detecting touch in 3D space with real object
 \label{Thermal Detection}
 The two main obstacles that Kurz brings up are detecting the touch in thermal imaging, and being able to find where the touch occurred on a 3D object. First he explored temperature profiles of a surface being touched, obstructed, or not interacted with at all. The 4 cases of temperatures profiles are: object-only, hand-only, obstruction-by-hand, and touch-by-hand. Object-only is just using the cameras to measure the relative constant temperature of an object. Hand only measured the temperature of a hand, expecting moderate temperature changes relative to fluctuating body temperature. Obstruction by hand starts with detecting an object and then having a hand come between the object and the camera, while not touching the object. The infrared camera will detect the rapid change from cool surface to a warm body, then rapidly back to the cool surface. The system is expected not to detect any interaction with these three. Touch by hand is when the object is actually touched. The observed temperature  will start with the cool surface temperature and then rise when the warm body obstructs the area. Then once the hand moves away, instead of a rapid change back to a cool surface there is a rapid decrease to a temperature between that of the hand and the object. After this initial rapid decrease the area will slowly cool, reverting back to the starting temperature. 
 
-Kurz used the OpenCV SimpleBlobDetector to detect blobs. A blob is the thermal impression left on a surface when one interacts with it. Using a temperature range between \(t_1\) and \(t_2\) the thermal camera is able to detect if an object was touched. Below is how \(t_1\) and \(t_2\) are calculated
+Theses thermal impressions are called blobs. A blob is a collection of light pixels on a dark background. Kurz used the OpenCV SimpleBlobDetector to detect these blobs. Below is how \(t_1\) and \(t_2\) are calculated
 
 \(
 \begin{matrix} \\
  t_{1}=(1-{1\over 16})t_{ min}+{1\over 16}t_{ max} & t_{2}=(1-{3\over 8})t_{ min}+{3\over 8}t_{ max}\cr 
  \end{matrix} \\\\
 \)
-This is calculated by taking \(t_{min}\) and \(t_{max}\), the minimum and maximum temperature recorded from the thermal camera. The camera then passing those numbers to the SimpleBlobDetector. Once \(t_1\) and \(t_2\) are obtained, the system now knows the expected temperature range of the interaction that might occur. Along with knowing the temperature range to expect, an area range of \(a_{1}=0.32{\rm cm}^{2}\) and \(a_{2}=1.54{\rm cm}^{2}\) is used for detecting the blobs; These numbers were determined by trial and error. Blobs with centers within 10 pixels of the edge of the image are ignored to reduce the amount of false positives from fingers entering and leaving the image. Kurz's experiments focused on single touch events, ignoring all blobs if there are more than one.
+Using a temperature range between \(t_1\) and \(t_2\), the thermal camera is able to detect if an object was touched. \(t_1\) and \(t_2\) is calculated by taking the minimum and maximum temperature recorded from the thermal camera, \(t_{min}\) and \(t_{max}\). The camera passes \(t_{min}\) and \(t_{max}\) to the SimpleBlobDetector to calculate \(t_1\) and \(t_2\). Once \(t_1\) and \(t_2\) are obtained, the system knows the expected temperature range of the interaction that might occur. The blob detector looks for a blob within a certain size range. Kurz found a size range of \(0.32{\rm cm}^{2}\) and \(1.54{\rm cm}^{2}\) for detecting the blobs was optimal; these numbers were determined by trial and error. Blobs with centers within 10 pixels of the edge of the image are ignored to reduce the number of false positives from fingers entering and leaving the image. Kurz's experiments focused on single touch events, ignoring all blobs if there are more than one.
 
-The position \(p_t\) is a blob detected by the thermal camera in 2D space (see Figure \ref{fig:Tracking}(b)), this position needs to be transformed in order to find the 3D position \(P_o\) (see Figure \ref{fig:Tracking}). In order to find where the interaction happened, the system first needs a 3D model of the car \ref{fig:Tracking}(c)). Using a linear algebra formula \({^t}T_o\), the system can determine the position of the car in relation to the visible light camera \(K_v\). Since the cameras were calibrated, we know the distance between the two. Using linear algebra \({^t}T_v\), the system is able to determine the position of the car in relation to the thermal camera, \(K_v\), through the visible light camera. After detecting an interaction \(p_t\), the system in now able to find \(P_o\) by using an imaginary line that passes through the object at the point of interaction. This is how the system is able to find the location of an interaction in relation to itself. The system needs this information in order to accurately correlate the interaction on an object to a given function.    
+The system needs to be able to find the location of an interaction in relation to itself. Given the thermal camera detects a blob in 2D space at position \(p_t\) (see Figure \ref{fig:Tracking}(b)), then the system needs to figure where the 3D position of the interaction is on the object, \(P_o\) (see Figure \ref{fig:Tracking}). In order to find where the interaction happened, the system first needs a 3D model of the car in Figure \ref{fig:Tracking}(c). Using a linear algebra formula \({^t}T_o\), the system can determine the position of the car in relation to the visible light camera \(K_v\). Since the cameras are a fixed distance from each other, we know the distance between the two (see Figure \ref{fig:hardware}). Because of the cameras fixed distance apart, we can use a linear algebra \({^t}T_v\) to determine the position of the car in relation to the thermal camera, \(K_v\). After detecting an interaction \(p_t\), the system in now able to find \(P_o\) by using an imaginary line that passes through the object, and will use the first point of intersection as \(P_o\).    
  
 \begin{figure}
 	\includegraphics[width=8.5cm, height=8cm]{numpad}
